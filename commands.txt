@@ -1,0 +1,31 @@
+latprak1 cmd line 
+
+mkdir artists_who_can_sing && cd artists_who_can_sing
+
+wget -O tutorials.zip --no-check-certificate 'https://drive.usercontent.google.com/u/0/uc?id=1lV1HVmPTY_BOAK6ToXymRu7V5eVfR0ut&export=download'
+
+unzip tutorials.zip -d singing_tutorials
+
+cd singing_tutorials/ && ls && ls -a
+
+find -name "*opera*NBAYoungboy*" -exec grep -o "FLAG{.*}" {} \; > ../flag.txt
+
+cd .. && grep -oP "(?<={).*(?=})" flag.txt | wget -O 'plsrunmeiamnotmalwarefr' -i -
+
+chmod +x ./plsrunmeiamnotmalwarefr && ./plsrunmeiamnotmalwarefr
+
+ps aux
+
+touch ransom.moolah && ps aux
+
+kill 1712 && ps aux
+
+sudo adduser yabadabadoo --ingroup sudo && groups yabadabadoo && su - yabadabadoo
+
+mkdir fufufafa && chmod 700 fufufafa && ls -l && cd fufufafa
+
+grep -rhP '^[0-9]{8}: (?!.*0000( 0000){7}$)' /var/tmp/pls_solve_this_puzzle/ | sort -u | grep -oP '(?<=:).*' | tr " \n" " " | sed 's/[ ]\+/ /g' | grep -oP '.*(?=.*0000( 0000){4})' | xxd -r -p > ./flag2.txt
+
+sudo cp /home/zele/college/programming/sms2/sisop/latPrak1/artists_who_can_sing/flag.txt .
+
+sudo rm -rf /var/tmp/pls_solve_this_puzzle/
