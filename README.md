@@ -102,9 +102,17 @@ $ cd .. && grep -oP "(?<={).*(?=})" flag.txt | wget -O 'plsrunmeiamnotmalwarefr'
 >       - The '-i' flag to make 'wget' receive input from a file.  
 >       - The '-' flag to indicate where the pipe input will be located at in the wget command.
 
+## 7. Change and check the plsrunmeiamnotmalwarefr file permission
 
+The way you can check the permission for a file is simply by using the list (ls) command.  
+Meanwhile you can change the permission by using the change mode (chmod) command.
 
-chmod +x ./plsrunmeiamnotmalwarefr && ./plsrunmeiamnotmalwarefr
+Use the following command: 
+
+```bash
+$ chmod +x ./plsrunmeiamnotmalwarefr && ./plsrunmeiamnotmalwarefr
+```
+
 
 ps aux
 
