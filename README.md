@@ -113,17 +113,106 @@ Use the following command:
 $ chmod +x ./plsrunmeiamnotmalwarefr && ./plsrunmeiamnotmalwarefr
 ```
 
+> 1. '+x' flag in chmod is to add "execute" permission to the plsrunmeiamnotmalware file.  
+>       - By not adding in what group chmod should add the permission to, it will by default add the permission to the user/owner's permission for the file.
+>
+> 2. To check the permissions information, we can use the:
+>       ```bash
+>       $ ls -l
+>       ```
+>       Where the '-l' flag is for ls command use a long listing format.
 
-ps aux
+## 8. Show the background running process of the plsrunmeiam
 
+For showing the background running process of the plsrunmeiam file, you can imagine it as the same as using the task manager in windows but in terminal.   
+You could achieve this by using the following command:
+
+```bash
+$ ps aux
+```
+
+> 1. 'ps' is short for "process status", where it literally is for showing the process status.
 touch ransom.moolah && ps aux
+> 2. 'a' argument in the 'ps' command is indicating "all users" process status
+> 3. 'u' argument in the 'ps' command is indicating "detailed user information" process status
+> 4. 'x' argument in the 'ps' command is indicating "show processes not attached to a terminal" process status,  
+So it can show the running processes that's currently running including the background services that's not connected to the terminal
 
-kill 1712 && ps aux
+## 9. Create ransom.moolah and check the process status again
 
-sudo adduser yabadabadoo --ingroup sudo && groups yabadabadoo && su - yabadabadoo
+We can create files easily by using the 'touch' command. 
 
-mkdir fufufafa && chmod 700 fufufafa && ls -l && cd fufufafa
+Use the following command to do this step:
 
+```bash
+$ touch ransom.moolah && ps aux
+
+``` 
+
+## 10. Kill the process from the plsrunmeiamnotmalwarefr file
+
+To achieve this step, you can just use the kill command
+
+```bash
+$ kill 1712 && ps aux
+```
+
+> '1712' is the Process ID (PID) for the plsrunmeiamnotmalware process.
+
+## 11. Create new user "yabadabadoo", add it into sudoers group, check the group status of the user, and login to the user
+
+1. To create a new user, we can use the adduser / useradd command.  
+     - Where adduser is the high-level version and useradd is the low-level version for "adding a user" command.  
+    - "High-level" means it's more user-friendly, "low-level" means it's more technical and have a higher control and higher skill requirements in detailed command executions  
+2. To add the user into the group, we can use the usermod (user modification) command or by using the flag in adduser command while creating the user, simultaneously creating and adding the user into a specific group.  
+    - In 'usermod' we can use the -aG flag to "append" to what "Group" 
+    - In 'adduser' we can use the '--ingroup' flag to "add" to what "Group" while simultaneously creating the new user
+3. To check whether the user has already gotten into the right group, we can use the 'groups' command 
+4. To login into the user we can use the 'su' (switch user) command
+    - There are multiple ways to use the 'su' command. One is with the format:  
+
+        ```bash
+        $ su <username>
+        ```
+        Where it switches the user without changing the shell environment.  
+
+        And the other one is:
+
+        ```bash
+        $ su - <username>
+        ```
+
+        Where it switches the user while also changing the shell environment. This will act like a new login session for the user, providing better security and environment isolation
+
+You could use the following command:
+
+```bash
+$ sudo adduser yabadabadoo --ingroup sudo && groups yabadabadoo && su - yabadabadoo
+```
+
+## 12. Create new folder/directory "fufufafa" and change the permission so that the only the owner and root can access it
+
+To do this step, we can use the 'mkdir' (make directory) command to create the new directory and then the chmod (chmod) to change the permission.
+
+You could see the following command:
+
+```bash
+$ mkdir fufufafa && chmod 700 fufufafa && ls -l && cd fufufafa
+```
+
+> 1. 'mkdir' to create new directory called "fufufafa"
+> 2. 'chmod' to change the directory permissions
+>       - The numbers is for easily setting permissions in each owner/group/others permissions
+>          - The value 4 for the permission "read" 
+>          - The value 2 for the permission "write"
+>          - The value 1 for the permission "execute"
+>       - The number position syntax is "ugo"  
+>           - u = user/owner  
+>           - g = group  
+>           - o = others
+>
+>           And since '7' is "4+2+1" it will represent "r+w+x" according to the respective values. This "addition" concept goes with how to add the permissions of ugo using numbers  
+>       - So '700' means owner will have rwx permission and group and others have no permissions
 grep -rhP '^[0-9]{8}: (?!.*0000( 0000){7}$)' /var/tmp/pls_solve_this_puzzle/ | sort -u | grep -oP '(?<=:).*' | tr " \n" " " | sed 's/[ ]\+/ /g' | grep -oP '.*(?=.*0000( 0000){4})' | xxd -r -p > ./flag2.txt
 
 sudo cp /home/zele/college/programming/sms2/sisop/latPrak1/artists_who_can_sing/flag.txt .
