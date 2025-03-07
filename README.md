@@ -227,7 +227,7 @@ Since in the puzzle, there's a hint about the second flag being a string of hexa
 You could use the following command to get the second flag: 
 
 ```bash
-$ grep -rhP '^[0-9]{8}: (?!.*0000( 0000){7}$)' /var/tmp/pls_solve_this_puzzle/ | sort -u | grep -oP '(?<=:).*' | tr " \n" " " | sed 's/[ ]\+/ /g' | grep -oP '.*(?=.*0000( 0000){4})' | xxd -r -p > ./flag2.txt
+$ grep -rhP '((?<=([0-9]{8}: )))(?!0000( 0000)pls_solve_this_puzzle/ | grep -oP '(?<=: ).*' | tr "\n" " " | grep -oP '.*(?=.*0000( 0000){4})' | xxd -r -p
 ```
 As you can see, that command is absolutely absurd.
 
