@@ -18,13 +18,13 @@ If you don't have them installed, you can install them using:
 $ sudo apt install wget unzip xxd
 ```
 
-After you have it installed, make a new folder named "artists_who_can_sing" and navigate to it:
+After you have it installed, make a new folder named _artists_who_can_sing_ and navigate to it:
 
 ```bash
 $ mkdir artists_who_can_sing && cd artists_who_can_sing
 ```
 
-## 2. Inside the "artists_who_can_sing" folder, download the tutorial files
+## 2. Inside the _artists_who_can_sing_ folder, download the tutorial files
     
 Open the google drive link from the [google document](https://drive.google.com/file/d/1lV1HVmPTY_BOAK6ToXymRu7V5eVfR0ut/view?usp=sharing) and then press the download button to get the real zip file download [link](https://drive.usercontent.google.com/u/0/uc?id=1lV1HVmPTY_BOAK6ToXymRu7V5eVfR0ut&export=download). 
 
@@ -36,7 +36,7 @@ $ wget -O tutorials.zip --no-check-certificate '<link>'
 
 Replace the \<link\> with the actual link for the download.
 
-## 3. Unzip the tutorials.zip file into the _new_ singing_tutorials folder
+## 3. Unzip the tutorials.zip file into the new _singing_tutorials_ folder
 
 Use the following command to unzip the tutorials.zip file:
 
@@ -45,11 +45,11 @@ $ unzip tutorials.zip -d singing_tutorials
 ```
 
 > - The -d flag specifies the destination directory for the files.
-> - If the directory "singing_tutorials" doesn't exist, it will be created.
+> - If the directory _singing_tutorials_ doesn't exist, it will be created.
 
-## 4. Navigate to the singing_tutorials folder and list all files and directories, including hidden files
+## 4. Navigate to the _singing_tutorials_ folder and list all files and directories, including hidden files
 
-Use the following command to navigate into singing_tutorials and list all files and directories, and then list it again including the hidden files:
+Use the following command to navigate into _singing_tutorials_ and list all files and directories, and then list it again including the hidden files:
 
 ```bash 
 $ cd singing_tutorials/ && ls && ls -a
@@ -57,7 +57,7 @@ $ cd singing_tutorials/ && ls && ls -a
 > - ls is for listing files and directories in the current working directory.
 > - Using the -a flag to list all files and directories, including hidden files.
 
-## 5. Find all files with the name "opera" and "NBAYoungboy" in the singing_tutorials folder and extract the FLAG from the file
+## 5. Find all files with the name "opera" and "NBAYoungboy" in the _singing_tutorials_ folder and extract the FLAG from the file
 
 For this, make sure the last output will only show one line of the right file and flag.
 
@@ -82,7 +82,7 @@ $ find -name "*opera*NBAYoungboy*" -exec grep -o "FLAG{.*}" {} \; > ../flag.txt
 >       - The '>' operator redirects (overwrite) the output to a file.    
 >       - The '>>' operator appends the output to a file.
 
-## 6. Go back on directory and then use the link from the flag.txt to download "plsrunmeiamnotmalwarefr" file.
+## 6. Go back on directory and then use the link from the flag.txt to download _plsrunmeiamnotmalwarefr_ file.
 
 This step can be done easily just by using the wget command. Use the following command:
 
@@ -102,7 +102,7 @@ $ cd .. && grep -oP "(?<={).*(?=})" flag.txt | wget -O 'plsrunmeiamnotmalwarefr'
 >       - The '-i' flag to make 'wget' receive input from a file.  
 >       - The '-' flag to indicate where the pipe input will be located at in the wget command.
 
-## 7. Change and check the plsrunmeiamnotmalwarefr file permission
+## 7. Change and check the _plsrunmeiamnotmalwarefr_ file permission
 
 The way you can check the permission for a file is simply by using the list (ls) command.  
 Meanwhile you can change the permission by using the change mode (chmod) command.
@@ -122,9 +122,9 @@ $ chmod +x ./plsrunmeiamnotmalwarefr && ./plsrunmeiamnotmalwarefr
 >       ```
 >       Where the '-l' flag is for ls command use a long listing format.
 
-## 8. Show the background running process of the plsrunmeiam
+## 8. Show the background running process of the _plsrunmeiamnotmalwarefr_
 
-For showing the background running process of the plsrunmeiam file, you can imagine it as the same as using the task manager in windows but in terminal.   
+For showing the background running process of the _plsrunmeiamnotmalwarefr_ file, you can imagine it as the same as using the task manager in windows but in terminal.   
 You could achieve this by using the following command:
 
 ```bash
@@ -138,7 +138,7 @@ touch ransom.moolah && ps aux
 > 4. 'x' argument in the 'ps' command is indicating "show processes not attached to a terminal" process status,  
 So it can show the running processes that's currently running including the background services that's not connected to the terminal
 
-## 9. Create ransom.moolah and check the process status again
+## 9. Create _ransom.moolah_ and check the process status again
 
 We can create files easily by using the 'touch' command. 
 
@@ -149,7 +149,7 @@ $ touch ransom.moolah && ps aux
 
 ``` 
 
-## 10. Kill the process from the plsrunmeiamnotmalwarefr file
+## 10. Kill the process from the _plsrunmeiamnotmalwarefr_ file
 
 To achieve this step, you can just use the kill command
 
@@ -159,7 +159,7 @@ $ kill 1712 && ps aux
 
 > '1712' is the Process ID (PID) for the plsrunmeiamnotmalware process.
 
-## 11. Create new user "yabadabadoo", add it into sudoers group, check the group status of the user, and login to the user
+## 11. Create new user _yabadabadoo_, add it into sudoers group, check the group status of the user, and login to the user
 
 1. To create a new user, we can use the adduser / useradd command.  
      - Where adduser is the high-level version and useradd is the low-level version for "adding a user" command.  
@@ -190,7 +190,7 @@ You could use the following command:
 $ sudo adduser yabadabadoo --ingroup sudo && groups yabadabadoo && su - yabadabadoo
 ```
 
-## 12. Create new folder/directory "fufufafa" and change the permission so that the only the owner and root can access it
+## 12. Create new folder/directory _fufufafa_ and change the permission so that the only the owner and root can access it
 
 To do this step, we can use the 'mkdir' (make directory) command to create the new directory and then the chmod (chmod) to change the permission.
 
@@ -213,8 +213,66 @@ $ mkdir fufufafa && chmod 700 fufufafa && ls -l && cd fufufafa
 >
 >           And since '7' is "4+2+1" it will represent "r+w+x" according to the respective values. This "addition" concept goes with how to add the permissions of ugo using numbers  
 >       - So '700' means owner will have rwx permission and group and others have no permissions
-grep -rhP '^[0-9]{8}: (?!.*0000( 0000){7}$)' /var/tmp/pls_solve_this_puzzle/ | sort -u | grep -oP '(?<=:).*' | tr " \n" " " | sed 's/[ ]\+/ /g' | grep -oP '.*(?=.*0000( 0000){4})' | xxd -r -p > ./flag2.txt
 
-sudo cp /home/zele/college/programming/sms2/sisop/latPrak1/artists_who_can_sing/flag.txt .
+## 13. Get the second flag in _pls_solve_this_puzzle_ in /var/tmp and put it in the _fufufafa_ directory
 
-sudo rm -rf /var/tmp/pls_solve_this_puzzle/
+If you check on the _/var/tmp/pls_solve_this_puzzle_ directory, you will find the "pls_solve_this_puzzle" directory which contains a lot of _.html_ files and directories that contains more _.html_ files and subdirectories that contains even more _.html_ files.
+
+If you check the inside of _.html_ files, you can see that there's a lot of lines that is filled with a lot of random sequence of characters as a string. 
+
+There are some that contains a random sequence of characters, and some that contains a sequence of some sort of hexadecimal characters.
+
+Since in the puzzle, there's a hint about the second flag being a string of hexadecimal characters, the base assumption is that the second flag is in the files that contains a string of hexadecimal characters.
+
+You could use the following command to get the second flag: 
+
+```bash
+$ grep -rhP '^[0-9]{8}: (?!.*0000( 0000){7}$)' /var/tmp/pls_solve_this_puzzle/ | sort -u | grep -oP '(?<=:).*' | tr " \n" " " | sed 's/[ ]\+/ /g' | grep -oP '.*(?=.*0000( 0000){4})' | xxd -r -p > ./flag2.txt
+```
+As you can see, that command is absolutely absurd.
+
+> 1. The first 'grep' here is used to search some sort of text inside the files.  
+>       - The '-r' flag is to search recursively in all files and subdirectories in the specified directory
+>       - The '-h' flag is to suppress prefixing the filenames containing the matched condition. So, it only outputs the matching lines instead of returning the filenames as well
+>       - The '-P' flag is to interpret the pattern as a Perl regular expression
+>       - The '^[0-9]{8}:' pattern is looking for lines that starts with a sequence of exactly 8 characters of any of the numbers (0-9) followed by a colon.  
+>           - Since in all of the files when you try searching with '^[0-9a-zA-z]{8}:' pattern, you could see that the lines with the hexadecimal characters starts with only '^[0-9]{8}:' pattern
+>       - The '(?!.*0000( 0000){7}$)' at the end of the pattern is a negative lookahead assertion. It means that it will only match lines that does not contain the pattern. 
+>           - In this case, it will only match lines that does not contain exactly 7 consecutive '0000'
+>       - The '/var/tmp/pls_solve_this_puzzle/' means in what directory the grep should search at
+> 
+> 2. The 'sort' here is used to sort the output lines  
+>       - The '-u' flag stands for "--unique", meaning it will only match with the first occurrence of input. This will remove any duplicates from the input.
+>
+> 3. The "grep -oP '(?<=:).*'" here is used to extract the characters after the colon from each line  
+>       - The '(?<=:)' is a positive lookbehind assertion. It means that it will only match the characters after the colon.
+>       - The '.*' is a wildcard that matches any character (except newline) zero or more times.
+>
+> 4. The 'tr' command i short for "translate". Here it is used to replace all newline characters (\n) with a space in the output. This will merge multiple lines into a single line
+> 
+> 5. The 'sed' command is short for "stream editor". Here it is used to replace all spaces with a single space in the output. This will remove any extra spaces from the output
+> 
+>       - The 's/[ ]\+/ /g' here mean to change multiple occurrences of spaces with a single space by using the RegEx pattern.
+> 6. The "grep -oP '.*(?=.*0000( 0000){4})'" here is used to extract the characters before the sequence of exactly 5 consecutive '0000' separated with a space from each line
+>
+> 7. The 'xxd -r -p' here is used to convert the hexadecimal characters back to the original string. 
+>       - The '-r' flag stands for "revert", meaning it will convert the hexadecimal characters to the original string in reverse order
+>      - The '-p' flag will print the output in a format that can easily be read
+>
+> 8. The '> ./flag2.txt' is to redirect the output to a file named "flag2.txt" in the current directory.
+
+## 14. Copy the flag.txt file from before to the current directory
+
+Doing this is simply enough use the 'cp' command, like following: 
+
+```bash
+$ sudo cp /home/zele/college/programming/sms2/sisop/latPrak1/artists_who_can_sing/flag.txt .
+```
+
+## 15. Remove the _/var/tmp/pls_solve_this_puzzle_ directory
+
+This can be done by using the 'rm' command with the '-rf' flag, which stands for "recursive forcefully". This will remove the directory and all its contents. Use the following command:
+
+```bash
+$ sudo rm -rf /var/tmp/pls_solve_this_puzzle/
+```
